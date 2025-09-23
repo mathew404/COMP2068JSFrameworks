@@ -12,5 +12,23 @@ function computerPick() {
   }
 }
 
-const comp = computerPick();
-console.log("Computer selection:", comp);
+const prompt = require('prompt'); // load prompt package
+
+prompt.start();
+
+prompt.get(['userSelection'], function (err, result) {
+  if (err) {
+    console.log("Error:", err);
+    return;
+  }
+
+  let user = result.userSelection.trim().toUpperCase();
+  if (user === 'R') user = 'ROCK';
+  if (user === 'P') user = 'PAPER';
+  if (user === 'S') user = 'SCISSORS';
+
+  console.log("User selection:", user);
+
+  const comp = computerPick();
+  console.log("Computer selection:", comp);
+});
