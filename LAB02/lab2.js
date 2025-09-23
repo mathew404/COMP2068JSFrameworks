@@ -31,4 +31,20 @@ prompt.get(['userSelection'], function (err, result) {
 
   const comp = computerPick();
   console.log("Computer selection:", comp);
+  console.log(decideWinner(user, comp));
+
 });
+// Function to decide winner
+function decideWinner(user, comp) {
+  if (user === comp) {
+    return "It's a tie";
+  } else if (
+    (user === 'ROCK' && comp === 'SCISSORS') ||
+    (user === 'PAPER' && comp === 'ROCK') ||
+    (user === 'SCISSORS' && comp === 'PAPER')
+  ) {
+    return "User Wins";
+  } else {
+    return "Computer Wins";
+  }
+}
