@@ -1,6 +1,11 @@
 // lab2.js
+// LAB02 - Rock-Paper-Scissors Console App
+
 console.log("LAB02 started");
 
+const prompt = require('prompt'); // Load prompt package 
+
+// Function to get computer choice
 function computerPick() {
   const r = Math.random();
   if (r < 0.35) {
@@ -12,10 +17,25 @@ function computerPick() {
   }
 }
 
-const prompt = require('prompt'); // load prompt package
+// Function to decide winner
+function decideWinner(user, comp) {
+  if (user === comp) {
+    return "It's a tie";
+  } else if (
+    (user === 'ROCK' && comp === 'SCISSORS') ||
+    (user === 'PAPER' && comp === 'ROCK') ||
+    (user === 'SCISSORS' && comp === 'PAPER')
+  ) {
+    return "User Wins";
+  } else {
+    return "Computer Wins";
+  }
+}
 
+// Start prompt
 prompt.start();
 
+// Ask the user for input
 prompt.get(['userSelection'], function (err, result) {
   if (err) {
     console.log("Error:", err);
@@ -32,19 +52,4 @@ prompt.get(['userSelection'], function (err, result) {
   const comp = computerPick();
   console.log("Computer selection:", comp);
   console.log(decideWinner(user, comp));
-
 });
-// Function to decide winner
-function decideWinner(user, comp) {
-  if (user === comp) {
-    return "It's a tie";
-  } else if (
-    (user === 'ROCK' && comp === 'SCISSORS') ||
-    (user === 'PAPER' && comp === 'ROCK') ||
-    (user === 'SCISSORS' && comp === 'PAPER')
-  ) {
-    return "User Wins";
-  } else {
-    return "Computer Wins";
-  }
-}
