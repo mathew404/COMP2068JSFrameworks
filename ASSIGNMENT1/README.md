@@ -1,38 +1,41 @@
-# Personal Portfolio – Assignment 1 (COMP2068)
+# Personal Portfolio - Assignment 1 (COMP2068)
 
 **Author:** Mathew S Varkey  
-**Course:** COMP 2068 – JavaScript Frameworks  
+**Course:** COMP 2068 - JavaScript Frameworks  
 **Professor:** Eduardo Jaime  
 
-A simple personal portfolio built using **Node.js**, **Express**, and **Handlebars**.  
-This project demonstrates Express routing, static files, and Handlebars templates.
+A personal portfolio website built using Node.js, Express, and Handlebars.  
+This project demonstrates Express routing, static file serving, and Handlebars templating.
 
 ---
 
-## 🌐 Live Demo
-**Render Link:** https://<your-app-name>.onrender.com  
+## Live Demo
+**Render Link:** https://assignment1-portfolio-rdxp.onrender.com  
 **GitHub Repository:** https://github.com/mathew404/COMP2068JSFrameworks/tree/main/ASSIGNMENT1
 
----
-
-## 📄 Pages
-- **Home:** Basic introduction  
-- **About:** Info about me  
-- **Projects:** Example of work or experience  
-- **Contact:** Email, GitHub, and LinkedIn links
 
 ---
 
-## 🧠 Technologies Used
+## Pages
+
+- **Home:** Introduction page  
+- **About:** Information about me  
+- **Projects:** Example work or projects  
+- **Contact:** Email, GitHub, and LinkedIn links  
+
+---
+
+## Technologies Used
+
 - Node.js  
 - Express.js  
 - Express-Handlebars  
-- HTML5 & CSS3  
+- HTML5 and CSS3  
 - JavaScript (client-side)
 
 ---
 
-## ▶️ How to Run Locally
+## How to Run Locally
 
 1. Clone the repository:
    ```bash
