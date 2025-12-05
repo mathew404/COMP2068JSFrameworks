@@ -14,7 +14,7 @@ router.get('/register', (req, res) => {
 router.post('/register', async (req, res) => {
   const { displayName, email, password } = req.body;
 
-  // very basic validation – you can improve this
+  //  basic validation 
   if (!email || !password) {
     return res.render('auth/register', { error: 'Email and password are required.' });
   }
