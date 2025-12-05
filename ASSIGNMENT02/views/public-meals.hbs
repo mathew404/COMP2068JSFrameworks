@@ -1,0 +1,33 @@
+<h2 class="mb-3">Public Meals (Read Only)</h2>
+<p class="text-muted">This page shows a list of meals from the database. No add / edit / delete here.</p>
+
+{{#if meals.length}}
+  <div class="table-responsive">
+    <table class="table table-striped table-hover align-middle">
+      <thead>
+        <tr>
+          <th>Meal</th>
+          <th>Calories</th>
+          <th>Protein</th>
+          <th>Carbs</th>
+          <th>Fat</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each meals}}
+          <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.calories}}</td>
+            <td>{{this.protein}}</td>
+            <td>{{this.carbs}}</td>
+            <td>{{this.fat}}</td>
+            <td>{{this.notes}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{else}}
+  <p>No meals found yet.</p>
+{{/if}}
