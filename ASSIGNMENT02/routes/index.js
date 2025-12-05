@@ -1,9 +1,16 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const Meal = require('../models/Meal');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+// Home (splash)
+router.get('/', function (req, res) {
+  res.render('home');
+});
+
+// public read-only list of all meals
+router.get('/meals', async (req, res) => {
+  const meals = await Meal.find().sort({ createdAt: -1 }).lean();
+  res.render('public-meals', { meals });
 });
 
 module.exports = router;

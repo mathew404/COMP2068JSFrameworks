@@ -1,0 +1,29 @@
+<div class="row align-items-center">
+  <div class="col-md-6">
+    <h1 class="mb-3">Track Your Meals. Stay Consistent.</h1>
+    <p class="lead">
+      Fitness Meal Tracker helps you log meals, calories, and macros so you can stay on top of your goals.
+    </p>
+
+    {{#if currentUser}}
+      <a href="/meals/dashboard" class="btn btn-primary me-2">Go to My Dashboard</a>
+      <a href="/meals" class="btn btn-outline-secondary">View Public Meals</a>
+    {{else}}
+      <a href="/auth/register" class="btn btn-primary me-2">Get Started</a>
+      <a href="/meals" class="btn btn-outline-secondary">View Public Meals</a>
+    {{/if}}
+  </div>
+
+  <div class="col-md-6 mt-4 mt-md-0">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Why use this app?</h5>
+        <ul class="mb-0">
+          <li>Quickly log meals and calories</li>
+          <li>See all your meals in one dashboard</li>
+          <li>Access your data anywhere</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

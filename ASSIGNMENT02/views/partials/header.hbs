@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">Fitness Meal Tracker</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/meals">Public Meals</a>
+        </li>
+        {{#if currentUser}}
+          <li class="nav-item">
+            <a class="nav-link" href="/meals/dashboard">My Meals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/meals/create">Add Meal</a>
+          </li>
+        {{/if}}
+      </ul>
+
+      <ul class="navbar-nav ms-auto">
+        {{#if currentUser}}
+          <li class="nav-item">
+            <span class="navbar-text me-2">
+              Hi, {{currentUser.displayName}}
+            </span>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light btn-sm" href="/auth/logout">Logout</a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="btn btn-outline-light btn-sm me-2" href="/auth/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-warning btn-sm" href="/auth/register">Register</a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

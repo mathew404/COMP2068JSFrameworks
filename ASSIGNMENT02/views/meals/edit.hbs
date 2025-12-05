@@ -1,0 +1,36 @@
+<h2 class="mb-3">Edit Meal</h2>
+
+<form action="/meals/{{meal._id}}/edit" method="POST">
+  <div class="mb-3">
+    <label class="form-label" for="name">Meal Name</label>
+    <input required class="form-control" id="name" name="name" value="{{meal.name}}">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" for="calories">Calories</label>
+    <input required type="number" class="form-control" id="calories" name="calories" value="{{meal.calories}}">
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      <label class="form-label" for="protein">Protein (g)</label>
+      <input type="number" class="form-control" id="protein" name="protein" value="{{meal.protein}}">
+    </div>
+    <div class="col-md-4 mb-3">
+      <label class="form-label" for="carbs">Carbs (g)</label>
+      <input type="number" class="form-control" id="carbs" name="carbs" value="{{meal.carbs}}">
+    </div>
+    <div class="col-md-4 mb-3">
+      <label class="form-label" for="fat">Fat (g)</label>
+      <input type="number" class="form-control" id="fat" name="fat" value="{{meal.fat}}">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" for="notes">Notes</label>
+    <textarea class="form-control" id="notes" name="notes" rows="2">{{meal.notes}}</textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Update Meal</button>
+  <a href="/meals/dashboard" class="btn btn-secondary ms-2">Cancel</a>
+</form>
