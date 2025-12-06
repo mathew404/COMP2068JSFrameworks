@@ -1,3 +1,4 @@
+🔗 Live Demo: https://fitness-meal-tracker-885w.onrender.com/
 # Fitness Meal Tracker
 
 I built this app for COMP2068 to practice Express, MongoDB, and authentication.
